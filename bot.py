@@ -20,7 +20,7 @@ def webhook():
         message = api.messages.get(message_id)
         if message.personEmail != 'rep@webex.bot': # so the bot does not reply to itself
             api.messages.create(toPersonEmail=message.personEmail, markdown=message.text)
-    else :
+    else : # add if statments as you wish
         pass
     
     #webex webhook expects ok response back. after a certen requiests without ok resposne it will disactivate the webhook
